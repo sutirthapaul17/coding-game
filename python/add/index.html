@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python with Drag and Drop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Learn Python - Add Two Numbers</h1>
+
+    <div class="sidebar">
+        <!-- <a href="../../home.html" class="fa fa-home">Home</a> -->
+        <div id="score">Score: 0</div>
+        <button  class="side" onclick="goToHome()" >Home</button>
+        <!-- <a href="https://www.google.com/">&#8617;</a> -->
+        <button class="side" >&#8617;</button>
+        <!-- <a href="#">Hint</a> -->
+        <button class="side">Hint</button>
+    </div>
+
+
+    <!-- Tutorial Modal -->
+    <div id="tutorialModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Welcome to the Python Game!</h2>
+            <p>Here's how you can play the game:</p>
+            <ol>
+                <li>Drag Python functions from the <strong>Items Space</strong> to the <strong>Drop Zone</strong>.</li>
+                <li>Drop the items in the <strong>Drop Zone</strong> to build your code.</li>
+                <li>After dropping items, the corresponding code will appear in the <strong>Result Space</strong>.</li>
+                <li>If you make a mistake, use the <strong>Reset</strong> button to reset the page.</li>
+            </ol>
+            <button onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- <div id="myModal" class="modal2">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <iframe id="modalIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <!-- Items Space -->
+        <div id="itemsSpace">
+            <div id="itemPrint" class="draggable" draggable="true" ondragstart="drag(event)" title="Prints a message to the console">print</div>
+            <div id="itemPrintInt" class="draggable" draggable="true" ondragstart="drag(event)" >print(int)</div>
+            <div id="itemInput" class="draggable" draggable="true" ondragstart="drag(event)" title="String input">input</div>
+            <div id="itemAdd" class="draggable" draggable="true" ondragstart="drag(event)" title="Adds two numbers">add</div>
+            <div id="variable" class="draggable" draggable="true" ondragstart="drag(event)" title="new Variable">variable</div>
+            <div id="variable1" class="draggable" draggable="true" ondragstart="drag(event)" title="new Variable">a</div>
+            <div id="variable2" class="draggable" draggable="true" ondragstart="drag(event)" title="new Variable">b</div>
+            <div id="itemNumber1" class="draggable" draggable="true" ondragstart="drag(event)" title="Number 1">1</div>
+            <div id="itemNumber2" class="draggable" draggable="true" ondragstart="drag(event)" title="Number 2">2</div>
+            <div id="itemNextLine" class="draggable" draggable="true" ondragstart="drag(event)" title="Insert a new line">newline</div>
+            <div id="itemSubtract" class="draggable" draggable="true" ondragstart="drag(event)" title="Subtracts two numbers">subtract</div>
+            <div id="itemMultiply" class="draggable" draggable="true" ondragstart="drag(event)" title="Multiplies two numbers">multiply</div>
+        </div>
+        
+
+        <!-- Drop Zone -->
+        <div id="dropZone" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Drag items here to build your code!
+        </div>
+
+        <!-- Result Space -->
+        <div id="resultSpace">
+            <h3>Generated Python Code:</h3>
+            <pre id="result"></pre>
+        </div>
+        <div id="CodeSpace">
+            <h3>Verifying code:</h3>
+            <pre id="code"></pre>
+        </div>
+    </div>
+
+    <button id="reset">Reset</button>
+    <button id="actionButton" onclick="performAction()" >Perform Action</button>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

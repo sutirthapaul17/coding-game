@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DTI Game</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the  Game!</h1>
+    <button class="start-btn" onclick="redirectToGame()">Start</button>
+  </div>
+  <script>
+    localStorage.setItem('gameScore', 0);
+    function redirectToGame(){
+      window.location.href = '2ndPage.html'; // Replace 'game.html' with your actual game page
+    }
+  </script>
+</body>
+</html>

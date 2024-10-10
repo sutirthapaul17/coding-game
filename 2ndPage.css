@@ -1,0 +1,39 @@
+body{
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #ffefd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(images/gen.jpeg);
+    mask-repeat: no-repeat;
+}
+  
+.container{
+    text-align: center;
+}
+  
+h1{
+    font-size: 2.5em;
+    color: #ff4500;
+    margin-bottom: 40px;
+}
+  
+.lang-btn {
+    background-color: #87ceeb;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Comic Sans MS', cursive;
+}
+  
+.lang-btn:hover{
+    background-color: #4682b4;
+}
+  
